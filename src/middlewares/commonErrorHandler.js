@@ -51,6 +51,7 @@ export default (err, req, res, next) => {
   // };
 
   customResponse(
+    req,
     res,
     err.statusCode,
     err.status,

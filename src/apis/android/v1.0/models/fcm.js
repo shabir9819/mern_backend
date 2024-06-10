@@ -1,5 +1,5 @@
 import mongoose from "mongoose";
-import mongooseAdapter from "../../../libs/mongoose.js";
+import mongooseAdapter from "../../../../libs/mongoose.js";
 
 const fcmSchema = new mongooseAdapter.Schema({
   user_id: {
@@ -7,6 +7,9 @@ const fcmSchema = new mongooseAdapter.Schema({
     ref: "Users",
   },
   fcm_id: {
+    type: String,
+  },
+  sms_hash: {
     type: String,
   },
   make: {
@@ -18,8 +21,12 @@ const fcmSchema = new mongooseAdapter.Schema({
   os: {
     type: String,
   },
-  version: {
+  os_ver: {
     type: String,
+  },
+  ses_id: {
+    type: mongoose.Schema.Types.ObjectId,
+    ref: "Sessions",
   },
 });
 

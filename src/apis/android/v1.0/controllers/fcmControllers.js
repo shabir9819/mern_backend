@@ -1,24 +1,26 @@
-import { FAILED } from "../../../config/apiStatuses.js";
-import endpoints from "../../../config/endpoints.js";
-import validatorAdapter from "../../../libs/validator.js";
-import { successResponse } from "../../../utils/apiResponsesHelper.js";
-import ErrorHandler from "../../../utils/errorHandler.js";
+import { FAILED } from "../../../../config/apiStatuses.js";
+import endpoints from "../../../../config/endpoints.js";
+import validatorAdapter from "../../../../libs/validator.js";
+import { successResponse } from "../../../../utils/apiResponsesHelper.js";
+import ErrorHandler from "../../../../utils/errorHandler.js";
 import Fcms from "../models/fcm.js";
 import { findUser } from "./userControllers.js";
 
 const createNewFcm = async (req) => {
   try {
-    const { fcm_id, make, model, os, version } = req.body;
+    const { fcm_id, sms_hash, make, model, os, version, session_id } = req.body;
     const user = req.user;
     const userId = user?._id;
     if (fcm_id) {
       const newFcmDetail = new Fcms({
         user_id: userId,
         fcm_id,
+        sms_hash,
         make,
         model,
         os,
-        version,
+        os_ver: version,
+        ses_id: session_id,
       });
       await newFcmDetail.save();
       return newFcmDetail;
@@ -63,7 +65,7 @@ const updateFcm = async (id, updateData) => {
 
 const saveFcm = async (req, res, next) => {
   try {
-    const { fcm_id, make, model, os, version } = req.body;
+    const { fcm_id, sms_hash, make, model, os, version, session_id } = req.body;
     const user = req.user;
     const path = req.route.path;
     if (path === endpoints.save_fcm) {
@@ -101,10 +103,12 @@ const saveFcm = async (req, res, next) => {
         existingFcmDetail._id, // Corrected: Use _id directly
         {
           user_id: user?._id,
+          sms_hash,
           make,
           model,
           os,
-          version,
+          os_ver: version,
+          ses_id: session_id,
         },
         { new: true }
       );
@@ -113,7 +117,7 @@ const saveFcm = async (req, res, next) => {
     }
 
     path === endpoints.save_fcm &&
-      successResponse(res, undefined, undefined, "FCM saved successfully");
+      successResponse(req, res, undefined, undefined, "FCM saved successfully");
   } catch (error) {
     next(error);
   }

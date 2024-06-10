@@ -1,5 +1,7 @@
+import envKeys from "../config/envKeys.js";
 import mongooseAdapter from "../libs/mongoose.js";
-const mongoDbUri = process.env.MONGO_DB_URI;
+
+const mongoDbUri = envKeys.mongoDbUri;
 
 const connectToMongo = async () => {
   try {

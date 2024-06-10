@@ -1,5 +1,6 @@
 import express from "express";
-import endpoints from "../../../config/endpoints.js";
+// import endpoints from "../../../config/endpoints.js";
+import endpoints from "../../../../config/endpoints.js";
 import {
   loginUser,
   registerUser,

@@ -28,4 +28,8 @@ const convertToString = (value) => {
   }
 };
 
-export { convertToString };
+const removeLeadingSlash = (str) => {
+  return str.replace(/^\/+/, "");
+};
+
+export { convertToString, removeLeadingSlash };

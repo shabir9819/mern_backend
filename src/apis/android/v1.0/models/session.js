@@ -1,5 +1,5 @@
 import mongoose from "mongoose";
-import mongooseAdapter from "../../../libs/mongoose.js";
+import mongooseAdapter from "../../../../libs/mongoose.js";
 
 const sessionSchema = new mongooseAdapter.Schema({
   user_id: {

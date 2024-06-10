@@ -1,11 +1,11 @@
 import express from "express";
 import dotenvAdapter from "./libs/dotenv.js";
-const PORT = process.env.PORT || 8000;
+const PORT = envKeys.port || 8000;
 import connectToMongo from "./utils/mongoose.js";
 import commonErrorHandler from "./middlewares/commonErrorHandler.js";
-
-// Api files
-import api_v1 from "./apis/v1.0/index.js";
+import envKeys from "./config/envKeys.js";
+import { validateApiKeys } from "./middlewares/checkApiKeys.js";
+import validateApiPlatform from "./apis/index.js";
 
 // Set config for .env
 dotenvAdapter.getConfig();
@@ -26,7 +26,7 @@ app.get("/api", async (req, res) => {
   }
 });
 
-app.use("/api", api_v1);
+app.use("/api", validateApiKeys, validateApiPlatform);
 
 // Default Error middleware
 app.use(commonErrorHandler);

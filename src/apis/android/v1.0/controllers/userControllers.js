@@ -1,15 +1,15 @@
-import { FAILED, VALIDATION, NO, YES } from "../../../config/apiStatuses.js";
-import { getFormFieldErrors } from "../../../config/localMasterData.js";
-import validatorAdapter from "../../../libs/validator.js";
-import ErrorHandler from "../../../utils/errorHandler.js";
+import { FAILED, VALIDATION, NO, YES } from "../../../../config/apiStatuses.js";
+import { getFormFieldErrors } from "../../../../config/localMasterData.js";
+import validatorAdapter from "../../../../libs/validator.js";
+import ErrorHandler from "../../../../utils/errorHandler.js";
 import Users from "../models/users.js";
 import {
   successResponse,
   verifyResponse,
-} from "../../../utils/apiResponsesHelper.js";
+} from "../../../../utils/apiResponsesHelper.js";
 import { generateToken } from "./sessionControllers.js";
 import { saveFcm } from "./fcmControllers.js";
-import { sendOtpEmail } from "../../../utils/nodemailerHelpers.js";
+import { sendOtpEmail } from "../../../../utils/nodemailerHelpers.js";
 
 const registerUser = async (req, res, next) => {
   try {
@@ -70,7 +70,7 @@ const loginUser = async (req, res, next) => {
       existingUserDetail && (await existingUserDetail.decodeHash(password));
     if (existingUserDetail && isPasswordMatch) {
       if (existingUserDetail.activated === NO) {
-        return verifyResponse(res);
+        return verifyResponse(req, res);
       }
       req.user = existingUserDetail;
       req.auth = existingUserDetail._id;
@@ -85,9 +85,10 @@ const loginUser = async (req, res, next) => {
       const session_id = await generateToken(req, res, next);
       await saveFcm(req, res, next);
       const response = {
-        response_data: { session_id, ...userDataWithoutSensitiveFields },
+        session_id,
+        ...userDataWithoutSensitiveFields,
       };
-      return successResponse(res, 200, response);
+      return successResponse(req, res, 200, response);
     } else {
       throw new ErrorHandler(
         FAILED,
@@ -132,9 +133,10 @@ const verifyOtp = async (req, res, next) => {
     await saveFcm(req, res, next);
     const session_id = await generateToken(req, res, next);
     const response = {
-      response_data: { session_id, ...userDataWithoutSensitiveFields },
+      session_id,
+      ...userDataWithoutSensitiveFields,
     };
-    return successResponse(res, 200, response);
+    return successResponse(req, res, 200, response);
     res.send(existingUserDetail);
   } catch (e) {
     next(e);

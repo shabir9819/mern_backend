@@ -1,11 +1,11 @@
 import mongoose from "mongoose";
-import mongooseAdapter from "../../../libs/mongoose.js";
-import ErrorHandler from "../../../utils/errorHandler.js";
-import { VALIDATION, FAILED, YES, NO } from "../../../config/apiStatuses.js";
-import validatorAdapter from "../../../libs/validator.js";
-import bcryptAdapter from "../../../libs/bcrypt.js";
-import { sendOtpEmail } from "../../../utils/nodemailerHelpers.js";
-import { successResponse } from "../../../utils/apiResponsesHelper.js";
+import mongooseAdapter from "../../../../libs/mongoose.js";
+import ErrorHandler from "../../../../utils/errorHandler.js";
+import { VALIDATION, FAILED, YES, NO } from "../../../../config/apiStatuses.js";
+import validatorAdapter from "../../../../libs/validator.js";
+import bcryptAdapter from "../../../../libs/bcrypt.js";
+import { sendOtpEmail } from "../../../../utils/nodemailerHelpers.js";
+import { successResponse } from "../../../../utils/apiResponsesHelper.js";
 
 const userSchema = new mongooseAdapter.Schema(
   {
@@ -109,7 +109,6 @@ userSchema.methods.upsertNormalUser = async function (req, res, next, model) {
       throw new ErrorHandler(FAILED, 400, "Email already exists.");
     } else if (!userExists || (userExists && isExistedUserActivated === NO)) {
       const otp = await sendOtpEmail(email);
-      console.log({ otp, this: this });
       if (userExists && isExistedUserActivated === NO) {
         const id = userExists._id;
         await model.findByIdAndUpdate(id, { activation_code: otp });
@@ -119,7 +118,7 @@ userSchema.methods.upsertNormalUser = async function (req, res, next, model) {
         await this.encodeHash();
         await this.save();
       }
-      successResponse(res, undefined, undefined, "OTP sent to your email");
+      successResponse(req, res, undefined, undefined, "OTP sent to your email");
     }
   } catch (error) {
     throw new ErrorHandler(error.status || FAILED, 400, error.message);
