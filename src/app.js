@@ -5,7 +5,7 @@ import connectToMongo from "./utils/mongoose.js";
 import commonErrorHandler from "./middlewares/commonErrorHandler.js";
 import envKeys from "./config/envKeys.js";
 import { validateApiKeys } from "./middlewares/checkApiKeys.js";
-import validateApiPlatform from "./apis/index.js";
+import users from "./apis/users/index.js";
 
 // Set config for .env
 dotenvAdapter.getConfig();
@@ -26,7 +26,7 @@ app.get("/api", async (req, res) => {
   }
 });
 
-app.use("/api", validateApiKeys, validateApiPlatform);
+app.use("/api", validateApiKeys, users);
 
 // Default Error middleware
 app.use(commonErrorHandler);

@@ -1,3 +1,4 @@
+import validator from "validator";
 import { FAILED } from "../../../../config/apiStatuses.js";
 import endpoints from "../../../../config/endpoints.js";
 import validatorAdapter from "../../../../libs/validator.js";
@@ -5,22 +6,35 @@ import { successResponse } from "../../../../utils/apiResponsesHelper.js";
 import ErrorHandler from "../../../../utils/errorHandler.js";
 import Fcms from "../models/fcm.js";
 import { findUser } from "./userControllers.js";
+import { generateToken } from "./sessionControllers.js";
 
 const createNewFcm = async (req) => {
   try {
-    const { fcm_id, sms_hash, make, model, os, version, session_id } = req.body;
+    const {
+      fcm_id,
+      fcm_device_id,
+      sms_hash,
+      make,
+      model,
+      os,
+      version,
+      session_id,
+    } = req.body;
+    const fcmId = fcm_id || fcm_device_id;
     const user = req.user;
     const userId = user?._id;
+    if (!validatorAdapter.isMongoId(user)) {
+      throw new ErrorHandler(FAILED, 400, "Invalid user id");
+    }
     if (fcm_id) {
       const newFcmDetail = new Fcms({
         user_id: userId,
-        fcm_id,
+        fcm_id: fcmId,
         sms_hash,
         make,
         model,
         os,
         os_ver: version,
-        ses_id: session_id,
       });
       await newFcmDetail.save();
       return newFcmDetail;
@@ -59,17 +73,27 @@ const updateFcm = async (id, updateData) => {
 
     return updatedFcm;
   } catch (error) {
-    throw new ErrorHandler("Failed to update FCM", 500, error.message);
+    throw new ErrorHandler(FAILED, 400, "Failed to update FCM");
   }
 };
 
 const saveFcm = async (req, res, next) => {
   try {
-    const { fcm_id, sms_hash, make, model, os, version, session_id } = req.body;
+    const {
+      fcm_id,
+      fcm_device_id,
+      sms_hash,
+      make,
+      model,
+      os,
+      version,
+      session_id,
+    } = req.body;
     const user = req.user;
     const path = req.route.path;
+    const fcmId = fcm_id || fcm_device_id;
     if (path === endpoints.save_fcm) {
-      if (!fcm_id || validatorAdapter.isEmpty(fcm_id)) {
+      if (!fcmId || validatorAdapter.isEmpty(fcmId)) {
         throw new ErrorHandler(FAILED, 400, "FCM ID is required");
       } else if (
         [make, model, os, version].some((field) =>
@@ -84,18 +108,16 @@ const saveFcm = async (req, res, next) => {
       }
     }
 
-    const existingFcmDetail = await findFcm(undefined, { fcm_id });
+    const existingFcmDetail = await findFcm(undefined, { fcm_id: fcmId });
 
     if (!existingFcmDetail) {
       // If fcm_id doesn't exist, create a new FCM detail
-      if (existingFcmDetail?.user_id !== req.auth) {
-        await createNewFcm(req);
-      }
+      await createNewFcm(req);
     } else if (
-      (existingFcmDetail.fcm_id === fcm_id && !existingFcmDetail?.user_id) ||
+      (existingFcmDetail.fcm_id === fcmId && !existingFcmDetail?.user_id) ||
       (!existingFcmDetail.fcm_id &&
         existingFcmDetail?.user_id === req.user?._id) ||
-      existingFcmDetail.fcm_id === fcm_id
+      existingFcmDetail.fcm_id === fcmId
     ) {
       // If fcm_id exists, update it only if it belongs to a guest user
 
@@ -108,7 +130,6 @@ const saveFcm = async (req, res, next) => {
           model,
           os,
           os_ver: version,
-          ses_id: session_id,
         },
         { new: true }
       );

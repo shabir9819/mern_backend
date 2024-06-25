@@ -4,7 +4,11 @@ import ErrorHandler from "../../../../utils/errorHandler.js";
 import { VALIDATION, FAILED, YES, NO } from "../../../../config/apiStatuses.js";
 import validatorAdapter from "../../../../libs/validator.js";
 import bcryptAdapter from "../../../../libs/bcrypt.js";
-import { sendOtpEmail } from "../../../../utils/nodemailerHelpers.js";
+import {
+  generateOtp,
+  generateOtpExpiry,
+  sendOtpEmail,
+} from "../../../../utils/nodemailerHelpers.js";
 import { successResponse } from "../../../../utils/apiResponsesHelper.js";
 
 const userSchema = new mongooseAdapter.Schema(
@@ -12,34 +16,38 @@ const userSchema = new mongooseAdapter.Schema(
     user_id: mongoose.Schema.Types.ObjectId,
     first_name: {
       type: String,
-      required: [true, "Enter first name."],
       lowercase: true,
     },
     last_name: { type: String, lowercase: true },
     email: {
       type: String,
-      required: [true, "Enter last name."],
-      unique: true,
       trim: true,
       validate: [validatorAdapter.isEmail, "Email is not valid."],
     },
     country_code: String,
-    phone: {
+    mobile: {
       type: Number,
+      unique: true,
       minLength: [10, "Phone number should be 10 digits"],
       maxLength: [10, "Phone number should be 10 digits"],
+      required: true,
     },
-    password: { type: String, required: true, select: false },
-    c_password: String,
+    mobile_verified: {
+      type: String,
+      enum: [YES, NO],
+      default: NO,
+      select: false,
+    },
+    otp_code: { type: Number, select: false },
+    otp_expiry: { type: Date, select: false },
     activated: {
       type: String,
       enum: [YES, NO],
       default: NO,
       select: false,
     },
-    activation_code: { type: Number, select: false },
-    created_at: { type: Date, select: false }, // Exclude from selection
-    updated_at: { type: Date, select: false }, // Exclude from selection
+    // created_at: { type: Date, select: false }, // Exclude from selection
+    // updated_at: { type: Date, select: false }, // Exclude from selection
   },
   {
     timestamps: {
@@ -96,30 +104,51 @@ userSchema.methods.decodeHash = async function (password) {
   }
 };
 
+// userSchema.methods.upsertNormalUser = async function (req, res, next, model) {
+//   try {
+//     const { email } = this;
+//     const userExists = await model
+//       .findOne({ email })
+//       .select("+activated +activation_code");
+//     const isExistedUserActivated = userExists?.activated;
+//     // console.log(isExistedUserActivated);
+//     // console.log({ userExists });
+//     if (userExists && isExistedUserActivated === YES) {
+//       throw new ErrorHandler(FAILED, 400, "Email already exists.");
+//     } else if (!userExists || (userExists && isExistedUserActivated === NO)) {
+//       const otp = await sendOtpEmail(email);
+//       if (userExists && isExistedUserActivated === NO) {
+//         const id = userExists._id;
+//         await model.findByIdAndUpdate(id, { activation_code: otp });
+//       } else if (!userExists) {
+//         this.activation_code = otp;
+
+//         await this.encodeHash();
+//         await this.save();
+//       }
+//       successResponse(req, res, undefined, undefined, "OTP sent to your email");
+//     }
+//   } catch (error) {
+//     throw new ErrorHandler(error.status || FAILED, 400, error.message);
+//   }
+// };
+
 userSchema.methods.upsertNormalUser = async function (req, res, next, model) {
   try {
-    const { email } = this;
+    const { mobile } = this;
     const userExists = await model
-      .findOne({ email })
-      .select("+activated +activation_code");
-    const isExistedUserActivated = userExists?.activated;
-    // console.log(isExistedUserActivated);
-    // console.log({ userExists });
-    if (userExists && isExistedUserActivated === YES) {
-      throw new ErrorHandler(FAILED, 400, "Email already exists.");
-    } else if (!userExists || (userExists && isExistedUserActivated === NO)) {
-      const otp = await sendOtpEmail(email);
-      if (userExists && isExistedUserActivated === NO) {
-        const id = userExists._id;
-        await model.findByIdAndUpdate(id, { activation_code: otp });
-      } else if (!userExists) {
-        this.activation_code = otp;
-
-        await this.encodeHash();
-        await this.save();
-      }
-      successResponse(req, res, undefined, undefined, "OTP sent to your email");
+      .findOne({ mobile })
+      .select("+otp_code +otp_expiry");
+    const isValidMobile = await validatorAdapter.isMobilePhone(mobile);
+    if (!isValidMobile) {
+      throw new ErrorHandler(FAILED, 400, "Invalid mobile no.");
     }
+    const otp = generateOtp();
+    const otpExpiry = generateOtpExpiry();
+    this.otp_code = otp;
+    this.otp_expiry = otpExpiry;
+    await this.save();
+    successResponse(req, res, undefined, undefined, "OTP sent to your email");
   } catch (error) {
     throw new ErrorHandler(error.status || FAILED, 400, error.message);
   }

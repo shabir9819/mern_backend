@@ -15,22 +15,28 @@ const generateOtp = (length = 6) => {
   let otp = "";
   for (let i = 0; i < length; i++) {
     otp += digits[Math.floor(Math.random() * digits.length)];
-    console.log(otp);
   }
+  console.log({ otp });
   return otp;
+};
+
+const generateOtpExpiry = () => {
+  let otpExpiry = new Date();
+  const otpExpiryTime = envKeys.otpExpiryTime;
+  otpExpiry.setMinutes(otpExpiry.getMinutes() + otpExpiryTime);
+  return otpExpiry;
 };
 
 const sendOtpEmail = async (
   toEmail,
   subject = "Your OTP Code",
-  otpLength = 6,
+  otp,
   transporterOptions = defaultOptions
 ) => {
   try {
     const transporter = await nodemailerAdapter.createTransport(
       transporterOptions
     );
-    const otp = generateOtp(otpLength);
     const mailOptions = {
       from: transporterOptions.auth.user,
       to: toEmail,
@@ -45,4 +51,4 @@ const sendOtpEmail = async (
   }
 };
 
-export { generateOtp, sendOtpEmail };
+export { generateOtp, sendOtpEmail, generateOtpExpiry };

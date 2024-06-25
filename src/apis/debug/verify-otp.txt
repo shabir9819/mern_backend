@@ -1,0 +1,678 @@
+
+ REQUEST TIME: 16-06-2024 03:33:18 PM 
+ Request 
+  {"api_key":"QRa9Bk6Mz4L7PWqr1YtN","user_id":"666eb7a70cc185970a76d894","fcm_device_id":"FCM_ID","api_level":"","otp":"718896"} 
+ Response 
+ {"status":"FAILED","message":"Cannot read properties of undefined (reading '_id')","response_data":{"message":"Cannot read properties of undefined (reading '_id')"}} 
+
+
+ REQUEST TIME: 16-06-2024 03:32:57 PM 
+ Request 
+  {"api_key":"QRa9Bk6Mz4L7PWqr1YtN","user_id":"666eb7a70cc185970a76d894","fcm_device_id":"FCM_ID","api_level":"","otp":"718896"} 
+ Response 
+ {"status":"FAILED","message":"Cannot read properties of undefined (reading '_id')","response_data":{"message":"Cannot read properties of undefined (reading '_id')"}} 
+
+
+ REQUEST TIME: 16-06-2024 03:32:48 PM 
+ Request 
+  {"api_key":"QRa9Bk6Mz4L7PWqr1YtN","user_id":"666eb7a70cc185970a76d894","fcm_device_id":"FCM_ID","api_level":"","otp":"718896"} 
+ Response 
+ {"status":"FAILED","message":"Cannot read properties of undefined (reading '_id')","response_data":{"message":"Cannot read properties of undefined (reading '_id')"}} 
+
+
+ REQUEST TIME: 16-06-2024 03:32:05 PM 
+ Request 
+  {"api_key":"QRa9Bk6Mz4L7PWqr1YtN","user_id":"666eb7a70cc185970a76d894","fcm_device_id":"FCM_ID","api_level":"","otp":"718896"} 
+ Response 
+ {"status":"FAILED","message":"Cannot read properties of undefined (reading '_id')","response_data":{"message":"Cannot read properties of undefined (reading '_id')"}} 
+
+
+ REQUEST TIME: 16-06-2024 03:31:49 PM 
+ Request 
+  {"api_key":"QRa9Bk6Mz4L7PWqr1YtN","user_id":"666eb7a70cc185970a76d894","fcm_device_id":"FCM_ID","api_level":"","otp":"718896"} 
+ Response 
+ {"status":"FAILED","message":"Cannot read properties of undefined (reading '_id')","response_data":{"message":"Cannot read properties of undefined (reading '_id')"}} 
+
+
+ REQUEST TIME: 16-06-2024 03:31:02 PM 
+ Request 
+  {"api_key":"QRa9Bk6Mz4L7PWqr1YtN","user_id":"666eb7a70cc185970a76d894","fcm_device_id":"FCM_ID","api_level":"","otp":"526539"} 
+ Response 
+ {"status":400,"message":"Please enter a correct otp.","response_data":{"message":"Please enter a correct otp."}} 
+
+
+ REQUEST TIME: 16-06-2024 03:31:01 PM 
+ Request 
+  {"api_key":"QRa9Bk6Mz4L7PWqr1YtN","user_id":"666eb7a70cc185970a76d894","fcm_device_id":"FCM_ID","api_level":"","otp":"526539"} 
+ Response 
+ {"status":400,"message":"Please enter a correct otp.","response_data":{"message":"Please enter a correct otp."}} 
+
+
+ REQUEST TIME: 16-06-2024 03:31:00 PM 
+ Request 
+  {"api_key":"QRa9Bk6Mz4L7PWqr1YtN","user_id":"666eb7a70cc185970a76d894","fcm_device_id":"FCM_ID","api_level":"","otp":"526539"} 
+ Response 
+ {"status":400,"message":"Please enter a correct otp.","response_data":{"message":"Please enter a correct otp."}} 
+
+
+ REQUEST TIME: 16-06-2024 03:30:25 PM 
+ Request 
+  {"api_key":"QRa9Bk6Mz4L7PWqr1YtN","user_id":"666e9ba67ec585e2592c96c7","fcm_device_id":"FCM_ID","api_level":"","otp":"526539"} 
+ Response 
+ {"status":400,"message":"User not found","response_data":{"message":"User not found"}} 
+
+
+ REQUEST TIME: 16-06-2024 03:30:24 PM 
+ Request 
+  {"api_key":"QRa9Bk6Mz4L7PWqr1YtN","user_id":"666e9ba67ec585e2592c96c7","fcm_device_id":"FCM_ID","api_level":"","otp":"526539"} 
+ Response 
+ {"status":400,"message":"User not found","response_data":{"message":"User not found"}} 
+
+
+ REQUEST TIME: 16-06-2024 03:30:22 PM 
+ Request 
+  {"api_key":"QRa9Bk6Mz4L7PWqr1YtN","user_id":"666e9ba67ec585e2592c96c7","fcm_device_id":"FCM_ID","api_level":"","otp":"526539"} 
+ Response 
+ {"status":400,"message":"User not found","response_data":{"message":"User not found"}} 
+
+
+ REQUEST TIME: 16-06-2024 03:30:22 PM 
+ Request 
+  {"api_key":"QRa9Bk6Mz4L7PWqr1YtN","user_id":"666e9ba67ec585e2592c96c7","fcm_device_id":"FCM_ID","api_level":"","otp":"526539"} 
+ Response 
+ {"status":400,"message":"User not found","response_data":{"message":"User not found"}} 
+
+
+ REQUEST TIME: 16-06-2024 03:30:20 PM 
+ Request 
+  {"api_key":"QRa9Bk6Mz4L7PWqr1YtN","user_id":"666e9ba67ec585e2592c96c7","fcm_device_id":"FCM_ID","api_level":"","otp":"526539"} 
+ Response 
+ {"status":400,"message":"User not found","response_data":{"message":"User not found"}} 
+
+
+ REQUEST TIME: 16-06-2024 03:27:17 PM 
+ Request 
+  {"api_key":"QRa9Bk6Mz4L7PWqr1YtN","user_id":"666e9ba67ec585e2592c96c7","fcm_device_id":"FCM_ID","api_level":"","otp":"526539"} 
+ Response 
+ {"status":"SUCCESS","response_data":{"session_id":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2NmU5YmE2N2VjNTg1ZTI1OTJjOTZjNyIsImlhdCI6MTcxODUzMTEwOCwiZXhwIjoxNzI1NzMxMTA4fQ.70zvgcvnEYx9aDNZLZocA8Bqey7TP8ow_flLNKpjU0w","action":"signup_name"}} 
+
+
+ REQUEST TIME: 16-06-2024 03:26:33 PM 
+ Request 
+  {"api_key":"QRa9Bk6Mz4L7PWqr1YtN","user_id":"666e9ba67ec585e2592c96c7","fcm_device_id":"FCM_ID","api_level":"","otp":"526539"} 
+ Response 
+ {"status":"SUCCESS","response_data":{"session_id":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2NmU5YmE2N2VjNTg1ZTI1OTJjOTZjNyIsImlhdCI6MTcxODUzMTEwOCwiZXhwIjoxNzI1NzMxMTA4fQ.70zvgcvnEYx9aDNZLZocA8Bqey7TP8ow_flLNKpjU0w","action":"signup_name"}} 
+
+
+ REQUEST TIME: 16-06-2024 03:26:16 PM 
+ Request 
+  {"api_key":"QRa9Bk6Mz4L7PWqr1YtN","user_id":"666e9ba67ec585e2592c96c7","fcm_device_id":"FCM_ID","api_level":"","otp":"526539"} 
+ Response 
+ {"status":"SUCCESS","response_data":{"session_id":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2NmU5YmE2N2VjNTg1ZTI1OTJjOTZjNyIsImlhdCI6MTcxODUzMTEwOCwiZXhwIjoxNzI1NzMxMTA4fQ.70zvgcvnEYx9aDNZLZocA8Bqey7TP8ow_flLNKpjU0w","action":"signup_name"}} 
+
+
+ REQUEST TIME: 16-06-2024 03:25:39 PM 
+ Request 
+  {"api_key":"QRa9Bk6Mz4L7PWqr1YtN","user_id":"666e9ba67ec585e2592c96c7","fcm_device_id":"FCM_ID","api_level":"","otp":"526539"} 
+ Response 
+ {"status":"SUCCESS","response_data":{"session_id":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2NmU5YmE2N2VjNTg1ZTI1OTJjOTZjNyIsImlhdCI6MTcxODUzMTEwOCwiZXhwIjoxNzI1NzMxMTA4fQ.70zvgcvnEYx9aDNZLZocA8Bqey7TP8ow_flLNKpjU0w","action":"signup_name"}} 
+
+
+ REQUEST TIME: 16-06-2024 03:24:44 PM 
+ Request 
+  {"api_key":"QRa9Bk6Mz4L7PWqr1YtN","user_id":"666e9ba67ec585e2592c96c7","fcm_device_id":"FCM_ID","api_level":"","otp":"526539"} 
+ Response 
+ {"status":"SUCCESS","response_data":{"action":"signup_name"}} 
+
+
+ REQUEST TIME: 16-06-2024 03:24:36 PM 
+ Request 
+  {"api_key":"QRa9Bk6Mz4L7PWqr1YtN","user_id":"666e9ba67ec585e2592c96c7","fcm_device_id":"FCM_ID","api_level":"","otp":"526539"} 
+ Response 
+ {"status":"SUCCESS","response_data":{"session_id":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2NmU5YmE2N2VjNTg1ZTI1OTJjOTZjNyIsImlhdCI6MTcxODUzMTY3NiwiZXhwIjoxNzI1NzMxNjc2fQ.bXUY2bLacLiYQ_iaoGEV_WLxbrWXAts-ILaJNMod7eI","action":"signup_name"}} 
+
+
+ REQUEST TIME: 16-06-2024 03:24:24 PM 
+ Request 
+  {"api_key":"QRa9Bk6Mz4L7PWqr1YtN","user_id":"666e9ba67ec585e2592c96c7","fcm_device_id":"FCM_ID","api_level":"","otp":"526539"} 
+ Response 
+ {"status":"SUCCESS","response_data":{"session_id":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2NmU5YmE2N2VjNTg1ZTI1OTJjOTZjNyIsImlhdCI6MTcxODUzMTY2NCwiZXhwIjoxNzI1NzMxNjY0fQ.Eraierba_5Bl94Ve2FQwhr3VYXETvrBipbY1bNQG3gU","action":"signup_name"}} 
+
+
+ REQUEST TIME: 16-06-2024 03:23:51 PM 
+ Request 
+  {"api_key":"QRa9Bk6Mz4L7PWqr1YtN","user_id":"666e9ba67ec585e2592c96c7","fcm_device_id":"FCM_ID","api_level":"","otp":"526539"} 
+ Response 
+ {"status":"SUCCESS","response_data":{"action":"signup_name"}} 
+
+
+ REQUEST TIME: 16-06-2024 03:23:19 PM 
+ Request 
+  {"api_key":"QRa9Bk6Mz4L7PWqr1YtN","user_id":"666e9ba67ec585e2592c96c7","fcm_device_id":"FCM_ID","api_level":"","otp":"526539"} 
+ Response 
+ {"status":"SUCCESS","response_data":{"action":"signup_name"}} 
+
+
+ REQUEST TIME: 16-06-2024 03:22:49 PM 
+ Request 
+  {"api_key":"QRa9Bk6Mz4L7PWqr1YtN","user_id":"666e9ba67ec585e2592c96c7","fcm_device_id":"FCM_ID","api_level":"","otp":"526539"} 
+ Response 
+ {"status":"SUCCESS","response_data":{"action":"signup_name"}} 
+
+
+ REQUEST TIME: 16-06-2024 03:22:21 PM 
+ Request 
+  {"api_key":"QRa9Bk6Mz4L7PWqr1YtN","user_id":"666e9ba67ec585e2592c96c7","fcm_device_id":"FCM_ID","api_level":"","otp":"526539"} 
+ Response 
+ {"status":"SUCCESS","response_data":{"action":"signup_name"}} 
+
+
+ REQUEST TIME: 16-06-2024 03:21:36 PM 
+ Request 
+  {"api_key":"QRa9Bk6Mz4L7PWqr1YtN","user_id":"666e9ba67ec585e2592c96c7","fcm_device_id":"FCM_ID","api_level":"","otp":"526539"} 
+ Response 
+ {"status":"FAILED","message":"ErrorHandler is not defined","response_data":{"message":"ErrorHandler is not defined"}} 
+
+
+ REQUEST TIME: 16-06-2024 03:20:45 PM 
+ Request 
+  {"api_key":"QRa9Bk6Mz4L7PWqr1YtN","user_id":"666e9ba67ec585e2592c96c7","fcm_device_id":"FCM_ID","api_level":"","otp":"526539"} 
+ Response 
+ {"status":"FAILED","message":"ErrorHandler is not defined","response_data":{"message":"ErrorHandler is not defined"}} 
+
+
+ REQUEST TIME: 16-06-2024 03:20:25 PM 
+ Request 
+  {"api_key":"QRa9Bk6Mz4L7PWqr1YtN","user_id":"666e9ba67ec585e2592c96c7","fcm_device_id":"FCM_ID","api_level":"","otp":"526539"} 
+ Response 
+ {"status":"FAILED","message":"ErrorHandler is not defined","response_data":{"message":"ErrorHandler is not defined"}} 
+
+
+ REQUEST TIME: 16-06-2024 03:18:55 PM 
+ Request 
+  {"api_key":"QRa9Bk6Mz4L7PWqr1YtN","user_id":"666e9ba67ec585e2592c96c7","fcm_device_id":"FCM_ID","api_level":"","otp":"526539"} 
+ Response 
+ {"status":"SUCCESS","response_data":{"session_id":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2NmU5YmE2N2VjNTg1ZTI1OTJjOTZjNyIsImlhdCI6MTcxODUzMTMzNSwiZXhwIjoxNzI1NzMxMzM1fQ.fTdzBQgJuOxnhP8jUN1ulU7HirRWLa-VDmMt_Tsf8zY","action":"signup_name"}} 
+
+
+ REQUEST TIME: 16-06-2024 03:18:43 PM 
+ Request 
+  {"api_key":"QRa9Bk6Mz4L7PWqr1YtN","user_id":"666e9ba67ec585e2592c96c7","fcm_device_id":"FCM_ID","api_level":"","otp":"526539"} 
+ Response 
+ {"status":"FAILED","message":"Cannot access 'existingFcm' before initialization","response_data":{"message":"Cannot access 'existingFcm' before initialization"}} 
+
+
+ REQUEST TIME: 16-06-2024 03:18:31 PM 
+ Request 
+  {"api_key":"QRa9Bk6Mz4L7PWqr1YtN","user_id":"666e9ba67ec585e2592c96c7","fcm_device_id":"FCM_ID","api_level":"","otp":"526539"} 
+ Response 
+ {"status":"FAILED","message":"Cannot access 'existingFcm' before initialization","response_data":{"message":"Cannot access 'existingFcm' before initialization"}} 
+
+
+ REQUEST TIME: 16-06-2024 03:18:18 PM 
+ Request 
+  {"api_key":"QRa9Bk6Mz4L7PWqr1YtN","user_id":"666e9ba67ec585e2592c96c7","fcm_device_id":"FCM_ID","api_level":"","otp":"526539"} 
+ Response 
+ {"status":"SUCCESS","response_data":{"session_id":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2NmU5YmE2N2VjNTg1ZTI1OTJjOTZjNyIsImlhdCI6MTcxODUzMTI5OCwiZXhwIjoxNzI1NzMxMjk4fQ.Nq8kZ8B9DV6n93DBUIa5xbRts2VrbC2lwcPqElIjHfQ","action":"signup_name"}} 
+
+
+ REQUEST TIME: 16-06-2024 03:18:05 PM 
+ Request 
+  {"api_key":"QRa9Bk6Mz4L7PWqr1YtN","user_id":"666e9ba67ec585e2592c96c7","fcm_device_id":"FCM_ID","api_level":"","otp":"526539"} 
+ Response 
+ {"status":"SUCCESS","response_data":{"session_id":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2NmU5YmE2N2VjNTg1ZTI1OTJjOTZjNyIsImlhdCI6MTcxODUzMTI4NSwiZXhwIjoxNzI1NzMxMjg1fQ.B-DbHrSUthPcl_P3FNe5oZ1sR2J-bLmqabYE7YQ7a8g","action":"signup_name"}} 
+
+
+ REQUEST TIME: 16-06-2024 03:18:05 PM 
+ Request 
+  {"api_key":"QRa9Bk6Mz4L7PWqr1YtN","user_id":"666e9ba67ec585e2592c96c7","fcm_device_id":"FCM_ID","api_level":"","otp":"526539"} 
+ Response 
+ {"status":"SUCCESS","response_data":{"session_id":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2NmU5YmE2N2VjNTg1ZTI1OTJjOTZjNyIsImlhdCI6MTcxODUzMTI4NCwiZXhwIjoxNzI1NzMxMjg0fQ.SADVNHLxfMpDq_fAy7cV17tEUl973gDb2EY6lJHtCiE","action":"signup_name"}} 
+
+
+ REQUEST TIME: 16-06-2024 03:18:04 PM 
+ Request 
+  {"api_key":"QRa9Bk6Mz4L7PWqr1YtN","user_id":"666e9ba67ec585e2592c96c7","fcm_device_id":"FCM_ID","api_level":"","otp":"526539"} 
+ Response 
+ {"status":"SUCCESS","response_data":{"session_id":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2NmU5YmE2N2VjNTg1ZTI1OTJjOTZjNyIsImlhdCI6MTcxODUzMTI4NCwiZXhwIjoxNzI1NzMxMjg0fQ.SADVNHLxfMpDq_fAy7cV17tEUl973gDb2EY6lJHtCiE","action":"signup_name"}} 
+
+
+ REQUEST TIME: 16-06-2024 03:17:48 PM 
+ Request 
+  {"api_key":"QRa9Bk6Mz4L7PWqr1YtN","user_id":"666e9ba67ec585e2592c96c7","fcm_device_id":"FCM_ID","api_level":"","otp":"526539"} 
+ Response 
+ {"status":"SUCCESS","response_data":{"session_id":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2NmU5YmE2N2VjNTg1ZTI1OTJjOTZjNyIsImlhdCI6MTcxODUzMTI2OCwiZXhwIjoxNzI1NzMxMjY4fQ.lQEZE1rQbLMfaiwLu8rVvT3prHvjYCLgVG_xmxsDr_Y","action":"signup_name"}} 
+
+
+ REQUEST TIME: 16-06-2024 03:17:47 PM 
+ Request 
+  {"api_key":"QRa9Bk6Mz4L7PWqr1YtN","user_id":"666e9ba67ec585e2592c96c7","fcm_device_id":"FCM_ID","api_level":"","otp":"526539"} 
+ Response 
+ {"status":"SUCCESS","response_data":{"session_id":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2NmU5YmE2N2VjNTg1ZTI1OTJjOTZjNyIsImlhdCI6MTcxODUzMTI2NywiZXhwIjoxNzI1NzMxMjY3fQ.meA4LYurpprrTJ5Uf4SYuH5luT0mPHiuT-aKFlA5CjE","action":"signup_name"}} 
+
+
+ REQUEST TIME: 16-06-2024 03:17:46 PM 
+ Request 
+  {"api_key":"QRa9Bk6Mz4L7PWqr1YtN","user_id":"666e9ba67ec585e2592c96c7","fcm_device_id":"FCM_ID","api_level":"","otp":"526539"} 
+ Response 
+ {"status":"SUCCESS","response_data":{"session_id":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2NmU5YmE2N2VjNTg1ZTI1OTJjOTZjNyIsImlhdCI6MTcxODUzMTI2NiwiZXhwIjoxNzI1NzMxMjY2fQ.WO2REI3JmOn4duDiE4E_8gl3PoS0rHImZPvQwT4oy6I","action":"signup_name"}} 
+
+
+ REQUEST TIME: 16-06-2024 03:17:33 PM 
+ Request 
+  {"api_key":"QRa9Bk6Mz4L7PWqr1YtN","user_id":"666e9ba67ec585e2592c96c7","fcm_device_id":"FCM_ID","api_level":"","otp":"526539"} 
+ Response 
+ {"status":"SUCCESS","response_data":{"session_id":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2NmU5YmE2N2VjNTg1ZTI1OTJjOTZjNyIsImlhdCI6MTcxODUzMTI1MywiZXhwIjoxNzI1NzMxMjUzfQ.YV0-7rxyia6U0dO5QKA-LvcvgEh0i2RVC0xeUGxw2ZE","action":"signup_name"}} 
+
+
+ REQUEST TIME: 16-06-2024 03:15:20 PM 
+ Request 
+  {"api_key":"QRa9Bk6Mz4L7PWqr1YtN","user_id":"666e9ba67ec585e2592c96c7","fcm_device_id":"FCM_ID","api_level":"","otp":"526539"} 
+ Response 
+ {"status":"SUCCESS","response_data":{"session_id":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2NmU5YmE2N2VjNTg1ZTI1OTJjOTZjNyIsImlhdCI6MTcxODUzMTEyMCwiZXhwIjoxNzI1NzMxMTIwfQ.iTs-_DOLKGILVxvNmShPxCVwh0nwRiyI6XSvHcmq4bs","action":"signup_name"}} 
+
+
+ REQUEST TIME: 16-06-2024 03:15:08 PM 
+ Request 
+  {"api_key":"QRa9Bk6Mz4L7PWqr1YtN","user_id":"666e9ba67ec585e2592c96c7","fcm_device_id":"FCM_ID","api_level":"","otp":"526539"} 
+ Response 
+ {"status":"SUCCESS","response_data":{"session_id":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2NmU5YmE2N2VjNTg1ZTI1OTJjOTZjNyIsImlhdCI6MTcxODUzMTEwOCwiZXhwIjoxNzI1NzMxMTA4fQ.70zvgcvnEYx9aDNZLZocA8Bqey7TP8ow_flLNKpjU0w","action":"signup_name"}} 
+
+
+ REQUEST TIME: 16-06-2024 03:11:41 PM 
+ Request 
+  {"api_key":"QRa9Bk6Mz4L7PWqr1YtN","user_id":"666e9ba67ec585e2592c96c7","fcm_device_id":"FCM_ID","api_level":"","otp":"526539"} 
+ Response 
+ {"status":"SUCCESS","response_data":{"session_id":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2NmU5YmE2N2VjNTg1ZTI1OTJjOTZjNyIsImlhdCI6MTcxODUzMDkwMSwiZXhwIjoxNzI1NzMwOTAxfQ.Dba1ZSLiqmmXhcLzhrETuThTLrN4gAozvMNU1YXXgxM","action":"signup_name"}} 
+
+
+ REQUEST TIME: 16-06-2024 03:10:55 PM 
+ Request 
+  {"api_key":"QRa9Bk6Mz4L7PWqr1YtN","user_id":"666e9ba67ec585e2592c96c7","fcm_device_id":"FCM_ID","api_level":"","otp":"526539"} 
+ Response 
+ {"status":"SUCCESS","response_data":{"session_id":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2NmU5YmE2N2VjNTg1ZTI1OTJjOTZjNyIsImlhdCI6MTcxODUzMDg1NSwiZXhwIjoxNzI1NzMwODU1fQ.3Yg7OhO4SBEqoP3lN07FSGnlpkzc2tU_qeiAGvpVI-s","action":"signup_name"}} 
+
+
+ REQUEST TIME: 16-06-2024 03:10:44 PM 
+ Request 
+  {"api_key":"QRa9Bk6Mz4L7PWqr1YtN","user_id":"666e9ba67ec585e2592c96c7","fcm_device_id":"FCM_ID","api_level":"","otp":"526539"} 
+ Response 
+ {"status":"SUCCESS","response_data":{"session_id":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2NmU5YmE2N2VjNTg1ZTI1OTJjOTZjNyIsImlhdCI6MTcxODUzMDg0NCwiZXhwIjoxNzI1NzMwODQ0fQ.Dy4O-eivf57_-HkzXSlqprwm7jzs1kuXvhGRvPvW3GQ","action":"signup_name"}} 
+
+
+ REQUEST TIME: 16-06-2024 03:10:33 PM 
+ Request 
+  {"api_key":"QRa9Bk6Mz4L7PWqr1YtN","user_id":"666e9ba67ec585e2592c96c7","fcm_device_id":"FCM_ID","api_level":"","otp":"526539"} 
+ Response 
+ {"status":"SUCCESS","response_data":{"session_id":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2NmU5YmE2N2VjNTg1ZTI1OTJjOTZjNyIsImlhdCI6MTcxODUzMDgzMywiZXhwIjoxNzI1NzMwODMzfQ.zFH5NjqpK_J_UNabaDD2aMwav3H1ggO1hm-YS6nT8So","action":"signup_name"}} 
+
+
+ REQUEST TIME: 16-06-2024 03:09:53 PM 
+ Request 
+  {"api_key":"QRa9Bk6Mz4L7PWqr1YtN","user_id":"666e9ba67ec585e2592c96c7","fcm_device_id":"FCM_ID","api_level":"","otp":"526539"} 
+ Response 
+ {"status":"SUCCESS","response_data":{"session_id":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2NmU5YmE2N2VjNTg1ZTI1OTJjOTZjNyIsImlhdCI6MTcxODUzMDc5MywiZXhwIjoxNzI1NzMwNzkzfQ.RTF47DRKvfdq3gr2r4Lig1uiwzukFgoBKEVVd295Wgk","action":"signup_name"}} 
+
+
+ REQUEST TIME: 16-06-2024 03:09:49 PM 
+ Request 
+  {"api_key":"QRa9Bk6Mz4L7PWqr1YtN","user_id":"666e9ba67ec585e2592c96c7","fcm_device_id":"FCM_ID","api_level":"","otp":"526539"} 
+ Response 
+ {"status":"SUCCESS","response_data":{"session_id":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2NmU5YmE2N2VjNTg1ZTI1OTJjOTZjNyIsImlhdCI6MTcxODUzMDc4OSwiZXhwIjoxNzI1NzMwNzg5fQ.dnl1eFhRaS1mH_MQzLYsnHJF1voCRbqpNc-HBJAZ1yE","action":"signup_name"}} 
+
+
+ REQUEST TIME: 16-06-2024 03:09:13 PM 
+ Request 
+  {"api_key":"QRa9Bk6Mz4L7PWqr1YtN","user_id":"666e9ba67ec585e2592c96c7","fcm_device_id":"FCM_ID","api_level":"","otp":"526539"} 
+ Response 
+ {"status":"SUCCESS","response_data":{"session_id":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2NmU5YmE2N2VjNTg1ZTI1OTJjOTZjNyIsImlhdCI6MTcxODUzMDc1MywiZXhwIjoxNzI1NzMwNzUzfQ.WHQl-gFDEayLBxKqqGmoglgQ2kofqd5pR9MdDamCtD4","action":"signup_name"}} 
+
+
+ REQUEST TIME: 16-06-2024 03:09:08 PM 
+ Request 
+  {"api_key":"QRa9Bk6Mz4L7PWqr1YtN","user_id":"666e9ba67ec585e2592c96c7","fcm_device_id":"FCM_ID","api_level":"","otp":"526539"} 
+ Response 
+ {"status":"SUCCESS","response_data":{"session_id":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2NmU5YmE2N2VjNTg1ZTI1OTJjOTZjNyIsImlhdCI6MTcxODUzMDc0OCwiZXhwIjoxNzI1NzMwNzQ4fQ.DkLO_H1ddNGyXya4WWD3GPH4GQ-8MyqQcENYFw0wZ3c","action":"signup_name"}} 
+
+
+ REQUEST TIME: 16-06-2024 03:07:43 PM 
+ Request 
+  {"api_key":"QRa9Bk6Mz4L7PWqr1YtN","user_id":"666e9ba67ec585e2592c96c7","fcm_device_id":"FCM_ID","api_level":"","otp":"526539"} 
+ Response 
+ {"status":"SUCCESS","response_data":{"session_id":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2NmU5YmE2N2VjNTg1ZTI1OTJjOTZjNyIsImlhdCI6MTcxODUzMDY2MywiZXhwIjoxNzI1NzMwNjYzfQ.UfIYx7LUva108xwOOJ0cHd4cVFBUZCoLvy3WMA_S7yY","action":"signup_name"}} 
+
+
+ REQUEST TIME: 16-06-2024 03:06:45 PM 
+ Request 
+  {"api_key":"QRa9Bk6Mz4L7PWqr1YtN","user_id":"666e9ba67ec585e2592c96c7","fcm_device_id":"FCM_ID","api_level":"","otp":"526539"} 
+ Response 
+ {"status":"SUCCESS","response_data":{"session_id":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2NmU5YmE2N2VjNTg1ZTI1OTJjOTZjNyIsImlhdCI6MTcxODUzMDYwNSwiZXhwIjoxNzI1NzMwNjA1fQ.eLxphZwowanuo-lAYkbBj2ONdyIKaoXGiLFdzhYCMY8","action":"signup_name"}} 
+
+
+ REQUEST TIME: 16-06-2024 03:01:47 PM 
+ Request 
+  {"api_key":"QRa9Bk6Mz4L7PWqr1YtN","user_id":"666e9ba67ec585e2592c96c7","fcm_device_id":"FCM_ID","api_level":"","otp":"526539"} 
+ Response 
+ {"status":"SUCCESS","response_data":{"session_id":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2NmU5YmE2N2VjNTg1ZTI1OTJjOTZjNyIsImlhdCI6MTcxODUzMDMwNywiZXhwIjoxNzI1NzMwMzA3fQ.Z7awemSpWlKDLJloClgJw-zgn2HJXC2SLVQDH_pOnnI","action":"signup_name"}} 
+
+
+ REQUEST TIME: 16-06-2024 03:01:29 PM 
+ Request 
+  {"api_key":"QRa9Bk6Mz4L7PWqr1YtN","user_id":"666e9ba67ec585e2592c96c7","fcm_device_id":"FCM_ID","api_level":"","otp":"526539"} 
+ Response 
+ {"status":"SUCCESS","response_data":{"action":"signup_name"}} 
+
+
+ REQUEST TIME: 16-06-2024 02:57:05 PM 
+ Request 
+  {"api_key":"QRa9Bk6Mz4L7PWqr1YtN","user_id":"666e9ba67ec585e2592c96c7","fcm_device_id":"FCM_ID","api_level":"","otp":"526539"} 
+ Response 
+ {"status":"SUCCESS","response_data":{"action":"signup_name"}} 
+
+
+ REQUEST TIME: 16-06-2024 02:55:14 PM 
+ Request 
+  {"api_key":"QRa9Bk6Mz4L7PWqr1YtN","user_id":"666e9ba67ec585e2592c96c7","fcm_device_id":"FCM_ID","api_level":"","otp":"526539"} 
+ Response 
+ {"status":"FAILED","message":"TypeError: Expected a string but received a model","response_data":{"message":"TypeError: Expected a string but received a model"}} 
+
+
+ REQUEST TIME: 16-06-2024 02:52:27 PM 
+ Request 
+  {"api_key":"QRa9Bk6Mz4L7PWqr1YtN","user_id":"666e9ba67ec585e2592c96c7","fcm_device_id":"","api_level":"","otp":"526539"} 
+ Response 
+ {"status":"FAILED","message":"TypeError: Expected a string but received a model","response_data":{"message":"TypeError: Expected a string but received a model"}} 
+
+
+ REQUEST TIME: 16-06-2024 02:51:25 PM 
+ Request 
+  {"api_key":"QRa9Bk6Mz4L7PWqr1YtN","user_id":"666e9ba67ec585e2592c96c7","fcm_device_id":"","api_level":"","otp":"526539"} 
+ Response 
+ {"status":"FAILED","message":"TypeError: Expected a string but received a model","response_data":{"message":"TypeError: Expected a string but received a model"}} 
+
+
+ REQUEST TIME: 16-06-2024 02:49:18 PM 
+ Request 
+  {"api_key":"QRa9Bk6Mz4L7PWqr1YtN","user_id":"666e9ba67ec585e2592c96c7","fcm_device_id":"","api_level":"","otp":"526539"} 
+ Response 
+ {"status":"FAILED","message":"TypeError: Expected a string but received a model","response_data":{"message":"TypeError: Expected a string but received a model"}} 
+
+
+ REQUEST TIME: 16-06-2024 02:48:11 PM 
+ Request 
+  {"api_key":"QRa9Bk6Mz4L7PWqr1YtN","user_id":"666e9ba67ec585e2592c96c7","fcm_device_id":"","api_level":"","otp":"526539"} 
+ Response 
+ {"status":"FAILED","message":"TypeError: Expected a string but received a model","response_data":{"message":"TypeError: Expected a string but received a model"}} 
+
+
+ REQUEST TIME: 16-06-2024 02:47:56 PM 
+ Request 
+  {"api_key":"QRa9Bk6Mz4L7PWqr1YtN","user_id":"666e9ba67ec585e2592c96c7","fcm_device_id":"","api_level":"","otp":"526539"} 
+ Response 
+ {"status":"FAILED","message":"TypeError: Expected a string but received a model","response_data":{"message":"TypeError: Expected a string but received a model"}} 
+
+
+ REQUEST TIME: 16-06-2024 02:31:32 PM 
+ Request 
+  {"api_key":"QRa9Bk6Mz4L7PWqr1YtN","user_id":"666e9ba67ec585e2592c96c7","fcm_device_id":"","api_level":"","otp":"526539"} 
+ Response 
+ {"status":"FAILED","message":"userDataWithoutSensitiveFields is not defined","response_data":{"message":"userDataWithoutSensitiveFields is not defined"}} 
+
+
+ REQUEST TIME: 16-06-2024 02:30:27 PM 
+ Request 
+  {"api_key":"QRa9Bk6Mz4L7PWqr1YtN","user_id":"666e9ba67ec585e2592c96c7","fcm_device_id":"","api_level":"","otp":"526539"} 
+ Response 
+ {"status":"FAILED","message":"Expected a string but received a undefined","response_data":{"message":"Expected a string but received a undefined"}} 
+
+
+ REQUEST TIME: 16-06-2024 02:28:35 PM 
+ Request 
+  {"api_key":"QRa9Bk6Mz4L7PWqr1YtN","user_id":"666e9ba67ec585e2592c96c7","fcm_device_id":"","api_level":"","otp":"904989"} 
+ Response 
+ {"status":400,"message":"Please enter a correct otp.","response_data":{"message":"Please enter a correct otp."}} 
+
+
+ REQUEST TIME: 16-06-2024 02:25:35 PM 
+ Request 
+  {"api_key":"QRa9Bk6Mz4L7PWqr1YtN","user_id":"666e9ba67ec585e2592c96c7","fcm_device_id":"","api_level":"","otp":"904989"} 
+ Response 
+ {"status":"SUCCESS","response_data":{"mobile":8928302392,"otp_code":904989,"otp_expiry":"2024-06-16T12:45:26.904Z"}} 
+
+
+ REQUEST TIME: 16-06-2024 02:24:29 PM 
+ Request 
+  {"api_key":"QRa9Bk6Mz4L7PWqr1YtN","user_id":"666e9ba67ec585e2592c96c7","fcm_device_id":"","api_level":"","otp":"116339"} 
+ Response 
+ {"status":"SUCCESS","response_data":{"mobile":8928302392,"otp_code":116339,"otp_expiry":"2024-06-16T12:35:17.663Z"}} 
+
+
+ REQUEST TIME: 16-06-2024 02:24:08 PM 
+ Request 
+  {"api_key":"QRa9Bk6Mz4L7PWqr1YtN","user_id":"666e9ba67ec585e2592c96c7","fcm_device_id":"","api_level":"","otp":"314542"} 
+ Response 
+ {"status":400,"message":"Please enter a correct otp.","response_data":{"message":"Please enter a correct otp."}} 
+
+
+ REQUEST TIME: 16-06-2024 02:23:35 PM 
+ Request 
+  {"api_key":"QRa9Bk6Mz4L7PWqr1YtN","user_id":"666e9ba67ec585e2592c96c7","fcm_device_id":"","api_level":"","otp":"314542"} 
+ Response 
+ {"status":"FAILED","message":"TypeError: Expected a string but received a undefined","response_data":{"message":"TypeError: Expected a string but received a undefined"}} 
+
+
+ REQUEST TIME: 16-06-2024 02:15:24 PM 
+ Request 
+  {"api_key":"QRa9Bk6Mz4L7PWqr1YtN","user_id":"666e9ba67ec585e2592c96c7","fcm_device_id":"","api_level":"","otp":""} 
+ Response 
+ {"status":400,"message":"Please enter a correct otp.","response_data":{"message":"Please enter a correct otp."}} 
+
+
+ REQUEST TIME: 16-06-2024 02:15:23 PM 
+ Request 
+  {"api_key":"QRa9Bk6Mz4L7PWqr1YtN","user_id":"666e9ba67ec585e2592c96c7","fcm_device_id":"","api_level":"","otp":""} 
+ Response 
+ {"status":400,"message":"Please enter a correct otp.","response_data":{"message":"Please enter a correct otp."}} 
+
+
+ REQUEST TIME: 16-06-2024 02:15:10 PM 
+ Request 
+  {"api_key":"QRa9Bk6Mz4L7PWqr1YtN","user_id":"666e9ba67ec585e2592c96c7","fcm_device_id":"","api_level":"","otp":""} 
+ Response 
+ {"status":400,"message":"Please enter a correct otp.","response_data":{"message":"Please enter a correct otp."}} 
+
+
+ REQUEST TIME: 16-06-2024 02:15:09 PM 
+ Request 
+  {"api_key":"QRa9Bk6Mz4L7PWqr1YtN","user_id":"666e9ba67ec585e2592c96c7","fcm_device_id":"","api_level":"","otp":""} 
+ Response 
+ {"status":400,"message":"Please enter a correct otp.","response_data":{"message":"Please enter a correct otp."}} 
+
+
+ REQUEST TIME: 16-06-2024 02:15:00 PM 
+ Request 
+  {"api_key":"QRa9Bk6Mz4L7PWqr1YtN","user_id":"666e9ba67ec585e2592c96c7","fcm_device_id":"","api_level":"","otp":""} 
+ Response 
+ {"status":400,"message":"Please enter a correct otp.","response_data":{"message":"Please enter a correct otp."}} 
+
+
+ REQUEST TIME: 16-06-2024 02:14:59 PM 
+ Request 
+  {"api_key":"QRa9Bk6Mz4L7PWqr1YtN","user_id":"666e9ba67ec585e2592c96c7","fcm_device_id":"","api_level":"","otp":""} 
+ Response 
+ {"status":400,"message":"Please enter a correct otp.","response_data":{"message":"Please enter a correct otp."}} 
+
+
+ REQUEST TIME: 16-06-2024 02:14:53 PM 
+ Request 
+  {"api_key":"QRa9Bk6Mz4L7PWqr1YtN","user_id":"666e9ba67ec585e2592c96c7","fcm_device_id":"","api_level":"","otp":""} 
+ Response 
+ {"status":400,"message":"Please enter a correct otp.","response_data":{"message":"Please enter a correct otp."}} 
+
+
+ REQUEST TIME: 16-06-2024 02:09:09 PM 
+ Request 
+  {"api_key":"QRa9Bk6Mz4L7PWqr1YtN","user_id":"666e9ba67ec585e2592c96c7","fcm_device_id":"","api_level":"","otp":""} 
+ Response 
+ {"status":"FAILED","message":"user is not defined","response_data":{"message":"user is not defined"}} 
+
+
+ REQUEST TIME: 16-06-2024 02:08:37 PM 
+ Request 
+  {"api_key":"QRa9Bk6Mz4L7PWqr1YtN","user_id":"666e9ba67ec585e2592c96c7","fcm_device_id":"","api_level":"","otp":""} 
+ Response 
+ {"status":"FAILED","message":"findUser(...).select is not a function","response_data":{"message":"findUser(...).select is not a function"}} 
+
+
+ REQUEST TIME: 16-06-2024 02:07:44 PM 
+ Request 
+  {"api_key":"QRa9Bk6Mz4L7PWqr1YtN","user_id":"666e9ba67ec585e2592c96c7","fcm_device_id":"","api_level":"","otp":""} 
+ Response 
+ {"status":"FAILED","message":"query.select is not a function","response_data":{"message":"query.select is not a function"}} 
+
+
+ REQUEST TIME: 16-06-2024 02:07:28 PM 
+ Request 
+  {"api_key":"QRa9Bk6Mz4L7PWqr1YtN","user_id":"666e9ba67ec585e2592c96c7","fcm_device_id":"","api_level":"","otp":""} 
+ Response 
+ {"status":"FAILED","message":"query.select is not a function","response_data":{"message":"query.select is not a function"}} 
+
+
+ REQUEST TIME: 16-06-2024 02:07:27 PM 
+ Request 
+  {"api_key":"QRa9Bk6Mz4L7PWqr1YtN","user_id":"666e9ba67ec585e2592c96c7","fcm_device_id":"","api_level":"","otp":""} 
+ Response 
+ {"status":"FAILED","message":"query.select is not a function","response_data":{"message":"query.select is not a function"}} 
+
+
+ REQUEST TIME: 16-06-2024 02:07:27 PM 
+ Request 
+  {"api_key":"QRa9Bk6Mz4L7PWqr1YtN","user_id":"666e9ba67ec585e2592c96c7","fcm_device_id":"","api_level":"","otp":""} 
+ Response 
+ {"status":"FAILED","message":"query.select is not a function","response_data":{"message":"query.select is not a function"}} 
+
+
+ REQUEST TIME: 16-06-2024 02:07:27 PM 
+ Request 
+  {"api_key":"QRa9Bk6Mz4L7PWqr1YtN","user_id":"666e9ba67ec585e2592c96c7","fcm_device_id":"","api_level":"","otp":""} 
+ Response 
+ {"status":"FAILED","message":"query.select is not a function","response_data":{"message":"query.select is not a function"}} 
+
+
+ REQUEST TIME: 16-06-2024 02:07:27 PM 
+ Request 
+  {"api_key":"QRa9Bk6Mz4L7PWqr1YtN","user_id":"666e9ba67ec585e2592c96c7","fcm_device_id":"","api_level":"","otp":""} 
+ Response 
+ {"status":"FAILED","message":"query.select is not a function","response_data":{"message":"query.select is not a function"}} 
+
+
+ REQUEST TIME: 16-06-2024 02:07:27 PM 
+ Request 
+  {"api_key":"QRa9Bk6Mz4L7PWqr1YtN","user_id":"666e9ba67ec585e2592c96c7","fcm_device_id":"","api_level":"","otp":""} 
+ Response 
+ {"status":"FAILED","message":"query.select is not a function","response_data":{"message":"query.select is not a function"}} 
+
+
+ REQUEST TIME: 16-06-2024 02:07:26 PM 
+ Request 
+  {"api_key":"QRa9Bk6Mz4L7PWqr1YtN","user_id":"666e9ba67ec585e2592c96c7","fcm_device_id":"","api_level":"","otp":""} 
+ Response 
+ {"status":"FAILED","message":"query.select is not a function","response_data":{"message":"query.select is not a function"}} 
+
+
+ REQUEST TIME: 16-06-2024 02:07:25 PM 
+ Request 
+  {"api_key":"QRa9Bk6Mz4L7PWqr1YtN","user_id":"666e9ba67ec585e2592c96c7","fcm_device_id":"","api_level":"","otp":""} 
+ Response 
+ {"status":"FAILED","message":"query.select is not a function","response_data":{"message":"query.select is not a function"}} 
+
+
+ REQUEST TIME: 16-06-2024 02:06:26 PM 
+ Request 
+  {"api_key":"QRa9Bk6Mz4L7PWqr1YtN","user_id":"666e9ba67ec585e2592c96c7","fcm_device_id":"","api_level":"","otp":""} 
+ Response 
+ {"status":"FAILED","message":"query.select is not a function","response_data":{"message":"query.select is not a function"}} 
+
+
+ REQUEST TIME: 16-06-2024 02:05:28 PM 
+ Request 
+  {"api_key":"QRa9Bk6Mz4L7PWqr1YtN","user_id":"666e9ba67ec585e2592c96c7","fcm_device_id":"","api_level":"","otp":""} 
+ Response 
+ {"status":"FAILED","message":"query.select is not a function","response_data":{"message":"query.select is not a function"}} 
+
+
+ REQUEST TIME: 16-06-2024 02:05:27 PM 
+ Request 
+  {"api_key":"QRa9Bk6Mz4L7PWqr1YtN","user_id":"666e9ba67ec585e2592c96c7","fcm_device_id":"","api_level":"","otp":""} 
+ Response 
+ {"status":"FAILED","message":"query.select is not a function","response_data":{"message":"query.select is not a function"}} 
+
+
+ REQUEST TIME: 16-06-2024 02:04:30 PM 
+ Request 
+  {"api_key":"QRa9Bk6Mz4L7PWqr1YtN","user_id":"666e9ba67ec585e2592c96c7","fcm_device_id":"","api_level":"","otp":""} 
+ Response 
+ {"status":"FAILED","message":"findUser(...).select is not a function","response_data":{"message":"findUser(...).select is not a function"}} 
+
+
+ REQUEST TIME: 16-06-2024 02:04:08 PM 
+ Request 
+  {"api_key":"QRa9Bk6Mz4L7PWqr1YtN","user_id":"666e9ba67ec585e2592c96c7","fcm_device_id":"","api_level":"","otp":""} 
+ Response 
+ {"status":"FAILED","message":"findUser(...).select is not a function","response_data":{"message":"findUser(...).select is not a function"}} 
+
+
+ REQUEST TIME: 16-06-2024 02:04:07 PM 
+ Request 
+  {"api_key":"QRa9Bk6Mz4L7PWqr1YtN","user_id":"666e9ba67ec585e2592c96c7","fcm_device_id":"","api_level":"","otp":""} 
+ Response 
+ {"status":"FAILED","message":"findUser(...).select is not a function","response_data":{"message":"findUser(...).select is not a function"}} 
+
+
+ REQUEST TIME: 16-06-2024 02:04:02 PM 
+ Request 
+  {"api_key":"QRa9Bk6Mz4L7PWqr1YtN","user_id":"666e9ba67ec585e2592c96c7","fcm_device_id":"","api_level":"","otp":""} 
+ Response 
+ {"status":"FAILED","message":"findUser(...).select is not a function","response_data":{"message":"findUser(...).select is not a function"}} 
+
+
+ REQUEST TIME: 16-06-2024 02:04:00 PM 
+ Request 
+  {"api_key":"QRa9Bk6Mz4L7PWqr1YtN","user_id":"666e9ba67ec585e2592c96c7","fcm_device_id":"","api_level":"","otp":""} 
+ Response 
+ {"status":"FAILED","message":"findUser(...).select is not a function","response_data":{"message":"findUser(...).select is not a function"}} 
+
+
+ REQUEST TIME: 16-06-2024 02:02:21 PM 
+ Request 
+  {"api_key":"QRa9Bk6Mz4L7PWqr1YtN","user_id":"666e9ba67ec585e2592c96c7","fcm_device_id":"","api_level":"","otp":""} 
+ Response 
+ {"status":"FAILED","message":"findUser(...).select is not a function","response_data":{"message":"findUser(...).select is not a function"}} 
+
+
+ REQUEST TIME: 16-06-2024 02:02:20 PM 
+ Request 
+  {"api_key":"QRa9Bk6Mz4L7PWqr1YtN","user_id":"666e9ba67ec585e2592c96c7","fcm_device_id":"","api_level":"","otp":""} 
+ Response 
+ {"status":"FAILED","message":"findUser(...).select is not a function","response_data":{"message":"findUser(...).select is not a function"}} 
+
+
+ REQUEST TIME: 16-06-2024 01:57:40 PM 
+ Request 
+  {"api_key":"QRa9Bk6Mz4L7PWqr1YtN","user_id":"666e9ba67ec585e2592c96c7","fcm_device_id":"","api_level":"","otp":""} 
+ Response 
+ {"status":"FAILED","message":"findUser(...).select is not a function","response_data":{"message":"findUser(...).select is not a function"}} 
+
+
+ REQUEST TIME: 16-06-2024 01:53:48 PM 
+ Request 
+  {"api_key":"QRa9Bk6Mz4L7PWqr1YtN","user_id":"666e9ba67ec585e2592c96c7","fcm_device_id":"","api_level":"","otp":""} 
+ Response 
+ {"status":"FAILED","message":"findUser(...).select is not a function","response_data":{"message":"findUser(...).select is not a function"}} 
+
+
+ REQUEST TIME: 16-06-2024 01:40:23 PM 
+ Request 
+  {"api_key":"QRa9Bk6Mz4L7PWqr1YtN","user_id":"","fcm_device_id":"","api_level":"","otp":""} 
+ Response 
+ {"status":"FAILED","message":"email is not defined"} 

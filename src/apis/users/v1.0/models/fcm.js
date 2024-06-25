@@ -24,10 +24,10 @@ const fcmSchema = new mongooseAdapter.Schema({
   os_ver: {
     type: String,
   },
-  ses_id: {
-    type: mongoose.Schema.Types.ObjectId,
-    ref: "Sessions",
-  },
+  // ses_id: {
+  //   type: mongoose.Schema.Types.ObjectId,
+  //   ref: "Sessions",
+  // },
 });
 
 const Fcms = mongooseAdapter.model("Fcm", fcmSchema);

@@ -11,7 +11,7 @@ const sessionSchema = new mongooseAdapter.Schema({
     type: String,
     required: true,
   },
-  email: {
+  mobile: {
     type: String,
     required: true,
   },

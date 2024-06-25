@@ -1,27 +1,98 @@
 
- REQUEST TIME: 10-06-2024 02:20:14 PM 
+ REQUEST TIME: 16-06-2024 03:30:05 PM 
  Request 
-  {"api_key":"ANDROID","fcm_id":"Fcm_ID","sms_hash":"SMS_HASH","make":"Redmi Note 5","model":"134365","os":"android","version":"13"} 
+  {"api_key":"QRa9Bk6Mz4L7PWqr1YtN","user_id":"","fcm_id":"FCM_ID","sms_hash":"SMS_HASH","make":"Redmi Note 5","model":"note 5","os":"android","version":"13","session_id":"666e694a196d58eee4e43d7f"} 
+ Response 
+ {"status":"SUCCESS","response_data":{"message":"FCM saved successfully"}} 
+
+
+ REQUEST TIME: 16-06-2024 02:56:50 PM 
+ Request 
+  {"api_key":"QRa9Bk6Mz4L7PWqr1YtN","user_id":"","fcm_id":"FCM_ID","sms_hash":"SMS_HASH","make":"Redmi Note 5","model":"note 5","os":"android","version":"13","session_id":"666e694a196d58eee4e43d7f"} 
+ Response 
+ {"status":"SUCCESS","response_data":{"message":"FCM saved successfully"}} 
+
+
+ REQUEST TIME: 16-06-2024 02:56:25 PM 
+ Request 
+  {"api_key":"QRa9Bk6Mz4L7PWqr1YtN","user_id":"","fcm_id":"FCM_ID","sms_hash":"SMS_HASH","make":"Redmi Note 5","model":"note 5","os":"android","version":"13","session_id":"666e694a196d58eee4e43d7f"} 
+ Response 
+ {"status":"FAILED","message":"TypeError: Expected a string but received a undefined","response_data":{"message":"TypeError: Expected a string but received a undefined"}} 
+
+
+ REQUEST TIME: 16-06-2024 12:14:15 PM 
+ Request 
+  {"api_key":"QRa9Bk6Mz4L7PWqr1YtN","user_id":"","fcm_id":"FCM_ID","sms_hash":"SMS_HASH","make":"Redmi Note 5","model":"note 5","os":"android","version":"13","session_id":"666e694a196d58eee4e43d7f"} 
  Response 
  {"status":"SUCCESS","message":"FCM saved successfully"} 
 
 
- REQUEST TIME: 10-06-2024 02:20:11 PM 
+ REQUEST TIME: 16-06-2024 12:14:04 PM 
  Request 
-  {"api_key":"ANDROID","fcm_id":"Fcm_ID","sms_hash":"SMS_HASH","make":"Redmi Note 5","model":"134365","os":"android","version":"13"} 
+  {"api_key":"QRa9Bk6Mz4L7PWqr1YtN","user_id":"","fcm_id":"FCM_ID","sms_hash":"SMS_HASH","make":"Redmi Note 5","model":"note 5","os":"android","version":"13","session_id":"666e694a196d58eee4e43d7f"} 
  Response 
  {"status":"SUCCESS","message":"FCM saved successfully"} 
 
 
- REQUEST TIME: 10-06-2024 02:20:11 PM 
+ REQUEST TIME: 16-06-2024 12:08:38 PM 
  Request 
-  {"api_key":"ANDROID","fcm_id":"Fcm_ID","sms_hash":"SMS_HASH","make":"Redmi Note 5","model":"134365","os":"android","version":"13"} 
+  {"api_key":"QRa9Bk6Mz4L7PWqr1YtN","user_id":"","fcm_id":"FCM_ID","sms_hash":"SMS_HASH","make":"Redmi Note 5","model":"note 5","os":"android","version":"13","session_id":"666e694a196d58eee4e43d7f"} 
  Response 
  {"status":"SUCCESS","message":"FCM saved successfully"} 
 
 
- REQUEST TIME: 10-06-2024 02:13:50 PM 
+ REQUEST TIME: 16-06-2024 12:07:26 PM 
  Request 
-  {"api_key":"ANDROID","fcm_id":"Fcm_ID","sms_hash":"SMS_HASH","make":"Redmi Note 5","model":"134365","os":"android","version":"13"} 
+  {"api_key":"QRa9Bk6Mz4L7PWqr1YtN","user_id":"","fcm_id":"FCM_ID","sms_hash":"SMS_HASH","make":"Redmi Note 5","model":"note 5","os":"android","version":"13","session_id":"666e694a196d58eee4e43d7f"} 
  Response 
  {"status":"SUCCESS","message":"FCM saved successfully"} 
+
+
+ REQUEST TIME: 16-06-2024 12:07:06 PM 
+ Request 
+  {"api_key":"QRa9Bk6Mz4L7PWqr1YtN","user_id":"","fcm_id":"FCM_ID","sms_hash":"SMS_HASH","make":"Redmi Note 5","model":"note 5","os":"android","version":"13","session_id":"666e694a196d58eee4e43d7f"} 
+ Response 
+ {"status":"SUCCESS","message":"FCM saved successfully"} 
+
+
+ REQUEST TIME: 16-06-2024 12:06:49 PM 
+ Request 
+  {"api_key":"QRa9Bk6Mz4L7PWqr1YtN","user_id":"","fcm_id":"FCM_ID","sms_hash":"SMS_HASH","make":"Redmi Note 5","model":"note 5","os":"android","version":"13","session_id":"666e694a196d58eee4e43d7f"} 
+ Response 
+ {"status":"SUCCESS","message":"FCM saved successfully"} 
+
+
+ REQUEST TIME: 16-06-2024 12:06:29 PM 
+ Request 
+  {"api_key":"QRa9Bk6Mz4L7PWqr1YtN","user_id":"","fcm_id":"FCM_ID","sms_hash":"SMS_HASH","make":"Redmi Note 5","model":"note 5","os":"android","version":"13","session_id":""} 
+ Response 
+ {"status":"SUCCESS","message":"FCM saved successfully"} 
+
+
+ REQUEST TIME: 16-06-2024 12:06:28 PM 
+ Request 
+  {"api_key":"QRa9Bk6Mz4L7PWqr1YtN","user_id":"","fcm_id":"FCM_ID","sms_hash":"SMS_HASH","make":"Redmi Note 5","model":"note 5","os":"android","version":"13","session_id":""} 
+ Response 
+ {"status":"SUCCESS","message":"FCM saved successfully"} 
+
+
+ REQUEST TIME: 16-06-2024 11:54:41 AM 
+ Request 
+  {"api_key":"QRa9Bk6Mz4L7PWqr1YtN","user_id":"","fcm_id":"FCM_ID","sms_hash":"SMS_HASH","make":"Redmi Note 5","model":"note 5","os":"android","version":"13","session_id":""} 
+ Response 
+ {"status":"FAILED","message":"Failed to update FCM"} 
+
+
+ REQUEST TIME: 16-06-2024 11:53:33 AM 
+ Request 
+  {"api_key":"QRa9Bk6Mz4L7PWqr1YtN","user_id":"","fcm_id":"FCM_ID","sms_hash":"SMS_HASH","make":"Redmi Note 5","model":"note 5","os":"android","version":"13","session_id":""} 
+ Response 
+ {"status":"FAILED","message":"Failed to update FCM"} 
+
+
+ REQUEST TIME: 16-06-2024 11:40:50 AM 
+ Request 
+  {"api_key":"QRa9Bk6Mz4L7PWqr1YtN","user_id":"","fcm_id":"FCM_ID","sms_hash":"SMS_HASH","make":"Redmi Note 5","model":"note 5","os":"android","version":"13"} 
+ Response 
+ {"status":"FAILED","message":"Cannot set headers after they are sent to the client"} 
+

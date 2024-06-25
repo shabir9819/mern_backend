@@ -5,7 +5,10 @@ const mongoDbUri = envKeys.mongoDbUri;
 
 const connectToMongo = async () => {
   try {
-    const connection = await mongooseAdapter.connect(`${mongoDbUri}/node2`, {});
+    const connection = await mongooseAdapter.connect(
+      `${mongoDbUri}/Roadbee`,
+      {}
+    );
     return connection; // Return connection object
   } catch (e) {
     console.error("MongoDB connection error:", e.message);

@@ -10,10 +10,10 @@ import { updateDebugFile } from "./debugFileHelper.js";
 const commonResponseJson = {};
 
 const successResponse = (req, res, statusCode = 200, data, message) => {
+  const response_message = message || undefined;
   const successResponseJson = {
     status: SUCCESS,
-    response_data: data,
-    message: message || undefined,
+    response_data: { ...data, message: response_message },
     ...commonResponseJson,
   };
   updateDebugFile(req, successResponseJson);
@@ -25,8 +25,7 @@ const validationResponse = (req, res, statusCode = 400, message, data) => {
   const response_data = data === null || data === undefined ? {} : data;
   const validationResponseJson = {
     status: VALIDATION,
-    message: response_message,
-    response_data: response_data,
+    response_data: { ...response_data, message: response_message },
     ...commonResponseJson,
   };
   updateDebugFile(req, validationResponseJson);
@@ -41,7 +40,7 @@ const verifyResponse = (req, res, statusCode = 400, message, data) => {
   const verifyResponseJson = {
     status: VERIFY,
     message: response_message,
-    response_data: response_data,
+    response_data: { ...response_data, message: response_message },
     ...commonResponseJson,
   };
 
@@ -56,7 +55,7 @@ const loginResponse = (req, res, statusCode = 401, message, data) => {
   const loginResponseJson = {
     status: LOGIN,
     message: response_message,
-    response_data: response_data,
+    response_data: { ...response_data, message: response_message },
     ...commonResponseJson,
   };
   updateDebugFile(req, loginResponseJson);
@@ -70,7 +69,7 @@ const failedResponse = (req, res, statusCode = 500, message, data) => {
   const failedResponseJson = {
     status: FAILED,
     message: response_message,
-    response_data: response_data,
+    response_data: { ...response_data, message: response_message },
     ...commonResponseJson,
   };
   updateDebugFile(req, failedResponseJson);
@@ -86,7 +85,7 @@ const customResponse = (req, res, statusCode = 200, status, message, data) => {
   const customResponseJson = {
     status: response_status,
     message: response_message,
-    response_data: response_data,
+    response_data: { ...response_data, message: response_message },
     ...commonResponseJson,
   };
   updateDebugFile(req, customResponseJson);

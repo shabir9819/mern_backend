@@ -4,6 +4,7 @@ import jsonwebtokenAdapter from "./../../../../libs/jsonwebtoken.js";
 import Sessions from "../models/session.js";
 import { findFcm } from "./fcmControllers.js";
 import envKeys from "../../../../config/envKeys.js";
+import validatorAdapter from "../../../../libs/validator.js";
 
 const createSession = async (sessionData) => {
   try {
@@ -13,11 +14,11 @@ const createSession = async (sessionData) => {
     throw new ErrorHandler(FAILED, 500, "Failed to create session");
   }
 };
-const findSession = async (id, data) => {
+const findSession = async (id, data, noOfResults = 1) => {
   try {
     const sessionData = id
       ? await Sessions.findById(id)
-      : await Sessions.find(data);
+      : await Sessions.find(data).limit(noOfResults);
     return sessionData;
   } catch (e) {
     throw new ErrorHandler(FAILED, 500, "Failed to find session");
@@ -55,20 +56,34 @@ const generateToken = async (req, res, next) => {
         options
       );
 
-      const { _id, email } = user;
-      const fcm_id = req.body.fcm_id;
+      const { _id, mobile } = user;
+      const fcmId = req.body?.fcm_id || req.body?.fcm_device_id;
       let sessionToken = await findSession(undefined, { user_id: _id });
-      const existingFcm = await findFcm(undefined, { fcm_id, user_id: _id });
+      const existingFcm = await findFcm(undefined, {
+        fcm_id: fcmId,
+        user_id: _id,
+      });
+      console.log(!sessionToken || !existingFcm);
       if (!sessionToken || !existingFcm) {
+        console.log("created");
         sessionToken = await createSession({
           user_id: _id,
           token,
-          email,
+          mobile,
           ip_address: "ip Address",
           source: "source",
           last_activity: new Date(),
         });
+      } else {
+        console.log("updated");
+        const sessionId = sessionToken[0]._id;
+        console.log({ sessionId });
+        let lastActivity = new Date();
+        // sessionToken = await updateSession(sessionId, {
+        //   last_activity: lastActivity,
+        // });
       }
+
       return sessionToken.token;
     }
   } catch (error) {
@@ -79,20 +94,22 @@ const generateToken = async (req, res, next) => {
 const isAuthenticateSession = async (req, res, next) => {
   try {
     const { session_id } = req.body;
-    const session = await Sessions.findOne({ token: session_id });
-    if (!session) {
+    const session = await findSession(undefined, { token: session_id });
+    if (!session || !validatorAdapter.isMongoId(session_id)) {
       customResponse(req, res, 400, LOGIN, "Invalid session id");
       return;
     }
-    const isValidToken = await jsonwebtokenAdapter.verifyToken(
-      session.token,
-      envKeys.jwtSecret
-    );
-    if (isValidToken && session.userId.toString() === isValidToken.id) {
+    const isValidToken = session.userId.toString() === isValidToken.id;
+    if (isValidToken) {
       next();
     } else {
       customResponse(req, res, 400, LOGIN, "Invalid session id");
     }
+    const sessionId = session[0]._id;
+    let lastActivity = new Date();
+    sessionToken = await updateSession(sessionId, {
+      last_activity: lastActivity,
+    });
   } catch (error) {
     next(error);
   }

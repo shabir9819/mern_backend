@@ -214,7 +214,14 @@ const validatorAdapter = {
   },
 
   isEmpty: (str) => {
+    if (str === undefined) {
+      return true;
+    }
     return validator.isEmpty(str);
+  },
+  isMongoValidObjectId: (id) => {
+    const objectIdRegex = /^[a-fA-F0-9]{24}$/;
+    return objectIdRegex.test(id);
   },
 };
 

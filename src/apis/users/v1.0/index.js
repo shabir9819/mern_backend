@@ -3,6 +3,6 @@ import userRoute from "./routes/usersRoute.js";
 import apiVersion from "../../../config/apiVersions.js";
 const router = express.Router();
 
-router.use(`/user/${apiVersion.v1}`, userRoute);
+router.use(`/${apiVersion.v1}`, userRoute);
 
 export default router;
