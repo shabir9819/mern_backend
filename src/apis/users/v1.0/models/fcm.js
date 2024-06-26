@@ -24,6 +24,10 @@ const fcmSchema = new mongooseAdapter.Schema({
   os_ver: {
     type: String,
   },
+  api_level: {
+    type: Number,
+    min: [3, "Api key should not be more than 3 digits."],
+  },
   // ses_id: {
   //   type: mongoose.Schema.Types.ObjectId,
   //   ref: "Sessions",

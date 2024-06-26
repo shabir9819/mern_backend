@@ -154,7 +154,7 @@ const validatorAdapter = {
   },
 
   isMobilePhone: (str, locale, options) => {
-    return validator.isMobilePhone(str, locale, options);
+    return str.length === 10 && validator.isMobilePhone(str, locale, options);
   },
 
   isCurrency: (str, options) => {
@@ -186,7 +186,7 @@ const validatorAdapter = {
   },
 
   isMongoId: (str) => {
-    return validator.isMongoId(str);
+    return str !== undefined && validator.isMongoId(str);
   },
 
   isJWT: (str) => {

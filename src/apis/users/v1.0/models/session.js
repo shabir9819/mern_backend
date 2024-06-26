@@ -1,11 +1,17 @@
 import mongoose from "mongoose";
 import mongooseAdapter from "../../../../libs/mongoose.js";
+import { NO, YES } from "../../../../config/apiStatuses.js";
+import validatorAdapter from "../../../../libs/validator.js";
 
 const sessionSchema = new mongooseAdapter.Schema({
   user_id: {
     type: mongoose.Schema.Types.ObjectId,
     required: true,
     ref: "Users",
+    validate: {
+      validator: (_id) => validatorAdapter.isMongoId(_id),
+      message: "Invalid user!",
+    },
   },
   token: {
     type: String,
@@ -29,6 +35,11 @@ const sessionSchema = new mongooseAdapter.Schema({
   },
   log_out_date_time: {
     type: Date,
+  },
+  force_logout: {
+    type: String,
+    enum: [YES, NO],
+    default: NO,
   },
 });
 

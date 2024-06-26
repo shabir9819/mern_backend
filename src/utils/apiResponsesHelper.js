@@ -39,7 +39,6 @@ const verifyResponse = (req, res, statusCode = 400, message, data) => {
   const response_data = data;
   const verifyResponseJson = {
     status: VERIFY,
-    message: response_message,
     response_data: { ...response_data, message: response_message },
     ...commonResponseJson,
   };
@@ -54,7 +53,6 @@ const loginResponse = (req, res, statusCode = 401, message, data) => {
   const response_data = data === null || data === undefined ? {} : data;
   const loginResponseJson = {
     status: LOGIN,
-    message: response_message,
     response_data: { ...response_data, message: response_message },
     ...commonResponseJson,
   };
@@ -68,7 +66,6 @@ const failedResponse = (req, res, statusCode = 500, message, data) => {
   const response_data = data;
   const failedResponseJson = {
     status: FAILED,
-    message: response_message,
     response_data: { ...response_data, message: response_message },
     ...commonResponseJson,
   };
@@ -84,7 +81,6 @@ const customResponse = (req, res, statusCode = 200, status, message, data) => {
   const response_data = data;
   const customResponseJson = {
     status: response_status,
-    message: response_message,
     response_data: { ...response_data, message: response_message },
     ...commonResponseJson,
   };

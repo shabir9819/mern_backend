@@ -16,14 +16,13 @@ const generateOtp = (length = 6) => {
   for (let i = 0; i < length; i++) {
     otp += digits[Math.floor(Math.random() * digits.length)];
   }
-  console.log({ otp });
   return otp;
 };
 
 const generateOtpExpiry = () => {
   let otpExpiry = new Date();
   const otpExpiryTime = envKeys.otpExpiryTime;
-  otpExpiry.setMinutes(otpExpiry.getMinutes() + otpExpiryTime);
+  otpExpiry.setMinutes(otpExpiry.getMinutes() + parseInt(otpExpiryTime, 10));
   return otpExpiry;
 };
 

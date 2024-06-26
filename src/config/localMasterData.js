@@ -1,21 +1,19 @@
 const formFieldKey = {
-  firstName: "firstName",
-  lastName: "lastName",
+  first_name: "first_name",
+  last_name: "last_name",
+  gender: "gender",
   email: "email",
-  countryCode: "countryCode",
+  country_code: "country_code",
   phone: "phone",
-  password: "password",
-  c_password: "c_password",
 };
 
 const formFieldErrors = {
-  firstName: "Enter first name.",
-  lastName: "Enter last name.",
+  first_name: "Enter first name.",
+  last_name: "Enter last name.",
   email: "Enter email id",
-  countryCode: "Enter countryCode",
+  gender: "Enter gender",
+  country_code: "Enter country code",
   phone: "Enter phone number",
-  password: "Enter password",
-  c_password: "Enter confirm password",
 };
 const getFormFieldErrors = () => {
   const errors = {};

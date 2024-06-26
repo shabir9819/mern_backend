@@ -1,5 +1,4 @@
 import ErrorHandler from "../utils/errorHandler.js";
-
 import { SUCCESS, FAILED, VALIDATION } from "../config/apiStatuses.js";
 import { customResponse } from "../utils/apiResponsesHelper.js";
 
@@ -7,6 +6,7 @@ export default (err, req, res, next) => {
   err.status = err.status || FAILED;
   err.response_data = err.response_data;
   err.statusCode = err.statusCode || 500;
+
   // Check if err.message is explicitly set to null or undefined
   if (err.message === undefined) {
     err.message = undefined;
@@ -16,23 +16,32 @@ export default (err, req, res, next) => {
 
   // Wrong Mongodb Id error
   if (err.name === "CastError") {
-    const message = `Resource not found. Invalid: ${err.path}`;
-    err = new ErrorHandler(message, 400);
+    const modelName = err.model.modelName.slice(
+      0,
+      err.model.modelName.length - 1
+    ); // Get model name from err.model
+    const message = `Invalid ${modelName} ID`;
+    err = new ErrorHandler(FAILED, 400, message);
   }
 
   // Mongoose duplicate key error
   if (err.code === 11000) {
     const type = Object.keys(err.keyValue)[0];
-    // const message = `Duplicate ${Object.keys(err.keyValue)} Entered`;
     let message;
     if (type === "email") {
       message = "Email Already Exists";
       err = new ErrorHandler(VALIDATION, 400, message);
-      console.log(err.status);
     }
   }
-  // console.log(err);
-  //   // Wrong JWT error
+
+  // Mongoose validation error
+  if (err.name === "ValidationError") {
+    const messages = Object.values(err.errors).map((error) => error.message);
+    const message = messages.join(", ");
+    err = new ErrorHandler(VALIDATION, 400, message);
+  }
+
+  // Wrong JWT error
   if (err.name === "JsonWebTokenError") {
     const message = `Json Web Token is invalid, Try again `;
     err = new ErrorHandler(message, 400);
@@ -44,11 +53,7 @@ export default (err, req, res, next) => {
     err = new ErrorHandler(message, 400);
   }
 
-  // let response = {
-  //   status: err.status,
-  //   message: err.message,
-  //   response_data: err.response_data,
-  // };
+  // console.log(err.message);
 
   customResponse(
     req,
@@ -58,5 +63,4 @@ export default (err, req, res, next) => {
     err.message,
     err.response_data
   );
-  // res.status(err.statusCode).json(response);
 };

@@ -14,6 +14,7 @@ import {
   sendOtpEmail,
 } from "../../../../utils/nodemailerHelpers.js";
 import { saveFcm } from "./fcmControllers.js";
+import { genderValues } from "../../../../constants/formValues.js";
 
 // const registerUser = async (req, res, next) => {
 //   try {
@@ -78,38 +79,41 @@ const createNewUser = async (req) => {
       return newUserDetail;
     }
   } catch (e) {
-    throw new Error(e);
+    throw e;
   }
 };
 
 const findUser = async (id, data, selectFields) => {
-  let query;
-  if (id) {
-    query = Users.findById(id);
-  } else {
-    query = Users.findOne(data);
+  try {
+    let query;
+    if (id) {
+      query = await Users.findById(id);
+    } else {
+      query = await Users.findOne(data);
+    }
+    if (selectFields) {
+      query = query.select(selectFields);
+    }
+    const userData = await query;
+    return userData;
+  } catch (e) {
+    throw e;
   }
-  if (selectFields) {
-    query = query.select(selectFields);
-  }
-  const userData = await query;
-  return userData;
 };
 
 const updateUser = async (id, updateData) => {
   try {
     if (!id) {
-      console.log(id);
       throw new ErrorHandler(FAILED, 400, "FCM ID is required");
     }
 
     const updatedFcm = await Users.findByIdAndUpdate(id, updateData, {
       new: true,
+      runValidators: true,
     });
-
     return updatedFcm;
   } catch (error) {
-    throw new ErrorHandler(FAILED, 400, "Failed to update user.");
+    throw error;
   }
 };
 
@@ -126,7 +130,7 @@ const sendOtp = async (req, res, next) => {
     );
     const otp = generateOtp();
     const otpExpiry = generateOtpExpiry();
-    console.log({ otp, otpExpiry });
+    console.log({ otp, otpExpiry: new Date(otpExpiry).toLocaleString() });
     let userData = {};
     if (userExists) {
       const user_id = userExists._id;
@@ -149,49 +153,56 @@ const sendOtp = async (req, res, next) => {
       "OTP sent to your email"
     );
   } catch (error) {
-    throw new ErrorHandler(error.status || FAILED, 400, error.message);
+    next(error);
   }
 };
 
 const verifyOtp = async (req, res, next) => {
   try {
-    const { user_id, fcm_device_id, api_level, otp } = req.body;
-    // const existingUserDetail = await findUser({
-    //   _id: user_id,
-    // }).select("+otp_code +otp_expiry");
+    const { user_id, otp } = req.body;
+
+    if (user_id && !validatorAdapter.isMongoId(user_id)) {
+      throw new ErrorHandler(undefined, 400, "Invalid user!");
+    }
+
     const existingUserDetail = await findUser(
       user_id,
       null,
       "+otp_code +otp_expiry +mobile_verified"
     );
     if (!existingUserDetail) {
-      throw new ErrorHandler(400, undefined, "User not found");
+      throw new ErrorHandler(undefined, 400, "Invalid user!");
     }
     const userReqOtp = Number(otp);
     const isOtpExpired = new Date() > new Date(existingUserDetail.otp_expiry);
-    if (existingUserDetail.otp_code !== userReqOtp && !isOtpExpired) {
+    if (isOtpExpired) {
+      throw new ErrorHandler(
+        400,
+        undefined,
+        "Otp expired. Please enter new otp."
+      );
+    } else if (existingUserDetail.otp_code !== userReqOtp && !isOtpExpired) {
       throw new ErrorHandler(400, undefined, "Please enter a correct otp.");
     }
     req.user = existingUserDetail;
     req.auth = existingUserDetail._id;
 
     // if otp matched then setting activated and is_mobile_verified to "Y" . Also setting otp_code and otp_expiry blank
-    // await updateUser(existingUserDetail._id, {
-    //   activated: YES,
-    //   is_mobile_verified: YES,
-    //   $unset: { otp_code: "", otp_expiry: "" },
-    // });
+    await updateUser(existingUserDetail._id, {
+      activated: YES,
+      is_mobile_verified: YES,
+      $unset: { otp_code: "", otp_expiry: "" },
+    });
     let action = "";
-    if (validatorAdapter.isEmpty(existingUserDetail.firstName)) {
+    if (validatorAdapter.isEmpty(existingUserDetail.f_name)) {
       action = "signup_name";
-    } else if (validatorAdapter.isEmpty(existingUserDetail.firstName)) {
+    } else if (validatorAdapter.isEmpty(existingUserDetail.first_motor_cycle)) {
       action = "first_motorcycle";
     } else {
       action = "dashboard";
     }
-
-    await saveFcm(req, res, next);
     const session_id = await generateToken(req, res, next);
+    await saveFcm(req, res, next);
     const response = {
       session_id,
       action,
@@ -243,5 +254,51 @@ const loginUser = async (req, res, next) => {
     next(e);
   }
 };
+const saveSignUpDetails = async (req, res, next) => {
+  try {
+    const { first_name, last_name, gender } = req.body;
+    const formFields = { first_name, last_name, gender };
 
-export { sendOtp, loginUser, findUser, verifyOtp };
+    // Validate form fields
+    const errors = {};
+    for (const [fieldName, fieldValue] of Object.entries(formFields)) {
+      if (validatorAdapter.isEmpty(fieldValue.toString())) {
+        const formError = getFormFieldErrors()[fieldName];
+        if (formError) {
+          const { key, message } = formError;
+          errors[key] = message;
+        }
+      }
+    }
+
+    if (Object.keys(errors).length > 0) {
+      throw new ErrorHandler(
+        VALIDATION,
+        400,
+        "Enter the form fields correctly",
+        { errors }
+      );
+    }
+    let updatedGender = genderValues[gender.toString().toLowerCase()] ?? "";
+    const userId = req.user?._id;
+    const updatedUserDetails = await updateUser(userId, {
+      f_name: first_name,
+      l_name: last_name,
+      gender: updatedGender,
+    });
+
+    if (updatedUserDetails) {
+      successResponse(
+        req,
+        res,
+        undefined,
+        undefined,
+        "Data saved successfully."
+      );
+    }
+  } catch (e) {
+    next(e);
+  }
+};
+
+export { sendOtp, loginUser, findUser, verifyOtp, saveSignUpDetails };
