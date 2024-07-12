@@ -186,7 +186,7 @@ const validatorAdapter = {
   },
 
   isMongoId: (str) => {
-    return str !== undefined && validator.isMongoId(str);
+    return str !== undefined && validator.isMongoId(String(str));
   },
 
   isJWT: (str) => {
@@ -214,7 +214,7 @@ const validatorAdapter = {
   },
 
   isEmpty: (str) => {
-    if (str === undefined) {
+    if (!str || str === undefined) {
       return true;
     }
     return validator.isEmpty(str);
@@ -222,6 +222,10 @@ const validatorAdapter = {
   isMongoValidObjectId: (id) => {
     const objectIdRegex = /^[a-fA-F0-9]{24}$/;
     return objectIdRegex.test(id);
+  },
+  isValidDate: (str) => {
+    const date = new Date(str);
+    return !isNaN(date.getTime()) && str === date.toISOString();
   },
 };
 

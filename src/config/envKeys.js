@@ -1,5 +1,6 @@
 const envKeys = {
   mongoDbUri: process.env.MONGO_DB_URI,
+  corsOrigin: process.env.CORS_ORIGIN,
   port: process.env.PORT,
   jwtSecret: process.env.JWT_SECRET,
   nodemailerUser: process.env.NODEMAILER_USER,

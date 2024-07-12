@@ -29,7 +29,12 @@ const convertToString = (value) => {
 };
 
 const removeLeadingSlash = (str) => {
-  return str.replace(/^\/+/, "");
+  return str.replace(/^\/+/, "").replace("-", "_");
 };
 
-export { convertToString, removeLeadingSlash };
+// Function to validate and transform dob
+const convertDateIntoMilliseconds = (dob) => {
+  return Math.floor(new Date(dob).getTime() / 1000); // Store as seconds
+};
+
+export { convertToString, removeLeadingSlash, convertDateIntoMilliseconds };
